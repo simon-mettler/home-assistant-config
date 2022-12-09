@@ -560,8 +560,8 @@ action:
               - conditions: '{{ button_right_long_loop }}'
                 sequence:
                   - repeat:
-                      - delay: 
-                          milliseconds: 500 
+                      delay: 
+                        milliseconds: 500 
                       while: '{{ repeat.index < button_right_long_max_loop_repeats | int }}'
                       sequence: !input action_button_right_long
             # if looping is not enabled run the custom action only once
@@ -645,8 +645,8 @@ action:
               - conditions: '{{ button_up_long_loop }}'
                 sequence:
                   - repeat:
-                      - delay: 
-                          milliseconds: 500 
+                      delay: 
+                        milliseconds: 500 
                       while: '{{ repeat.index < button_up_long_max_loop_repeats | int }}'
                       sequence: !input action_button_up_long
             # if looping is not enabled run the custom action only once
@@ -694,7 +694,7 @@ action:
                     default:
                       # wait for the double press event to occur, within the provided delay
                       # if the second press is received, automation is restarted
-                      - delay:
+                      delay:
                           milliseconds: '{{ adjusted_double_press_delay }}'
                       # if delay expires, no second press was received, therefore run the short press action
                       # run the short press action
@@ -730,8 +730,8 @@ action:
               - conditions: '{{ button_down_long_loop }}'
                 sequence:
                   - repeat:
-                      - delay: 
-                          milliseconds: 500 
+                      delay: 
+                        milliseconds: 500 
                       while: '{{ repeat.index < button_down_long_max_loop_repeats | int }}'
                       sequence: !input action_button_down_long
             # if looping is not enabled run the custom action only once
