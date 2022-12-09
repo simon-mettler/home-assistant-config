@@ -560,7 +560,8 @@ action:
               - conditions: '{{ button_right_long_loop }}'
                 sequence:
                   - repeat:
-                      delay: '00:00:0.3'
+                      - delay: 
+                          milliseconds: 500 
                       while: '{{ repeat.index < button_right_long_max_loop_repeats | int }}'
                       sequence: !input action_button_right_long
             # if looping is not enabled run the custom action only once
@@ -644,7 +645,8 @@ action:
               - conditions: '{{ button_up_long_loop }}'
                 sequence:
                   - repeat:
-                      delay: '00:00:0.3'
+                      - delay: 
+                          milliseconds: 500 
                       while: '{{ repeat.index < button_up_long_max_loop_repeats | int }}'
                       sequence: !input action_button_up_long
             # if looping is not enabled run the custom action only once
@@ -728,7 +730,8 @@ action:
               - conditions: '{{ button_down_long_loop }}'
                 sequence:
                   - repeat:
-                      delay: '00:00:0.3'
+                      - delay: 
+                          milliseconds: 500 
                       while: '{{ repeat.index < button_down_long_max_loop_repeats | int }}'
                       sequence: !input action_button_down_long
             # if looping is not enabled run the custom action only once
